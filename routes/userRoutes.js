@@ -19,6 +19,7 @@ router.get("/total-users", async (req, res) => {
   try {
     const totalUsers = await User.countDocuments(); // Count all users
     res.json({ totalUsers });
+    console.log(totalUsers);
   } catch (err) {
     res.status(500).json({ error: "Server error" });
   }

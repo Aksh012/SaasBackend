@@ -62,6 +62,8 @@ const updateStats = async () => {
   try {
     const stats = await Stats.getStats();
     stats.totalUsers = await User.countDocuments();
+    const totalUsersCount = await User.countDocuments();
+    stats.totalUsers = totalUsersCount;
     stats.lastUpdated = new Date();
     await stats.save();
   } catch (error) {

@@ -268,7 +268,7 @@ router.put(
       }
 
       // Update the profile image URL in the database
-      const profileImageUrl = `http://localhost:5000/uploads/${req.file.filename}`;
+      const profileImageUrl = `https://saasbackend-380j.onrender.com/uploads/${req.file.filename}`;
       user.profileImage = profileImageUrl;
       await user.save();
 

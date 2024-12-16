@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 const multer = require("multer");
 const path = require("path");
+const {updateStats} = require("../controllers/dashboardController")
 const { ActiveSession } = require("../models/dashboardData");
 
 const router = express.Router();
